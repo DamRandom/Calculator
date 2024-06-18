@@ -1,0 +1,100 @@
+/* Calculator.css */
+
+/* General styles */
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.outer-card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styles for the simple calculator */
+.simple-calculator-container .outer-card {
+  background: var(--color-white); /* Light purple background */
+  max-width: 300px;
+}
+
+/* Styles for the scientific calculator */
+.scientific-calculator-container .outer-card {
+  background: var(--color-white); /* Medium purple background */
+  max-width: 1000px;
+}
+
+/* Styles for the keypad */
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Specific styles for the scientific keypad */
+.keypad.scientific {
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  width: calc(100% - 40px); /* Total width minus padding */
+  margin: 0 auto; /* Center the grid horizontally */
+}
+
+/* Styles for buttons */
+button {
+  background: var(--color-lighter-purple); /* Light purple */
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background: var(--color-medium-purple); /* Medium purple */
+  transform: scale(1.05);
+}
+
+button:active {
+  background: var(--color-dark-purple); /* Dark purple */
+}
+
+/* Specific styles for the equal button */
+button.equal {
+  grid-column: span 4;
+  background: var(--color-dark-purple); /* Dark purple */
+  height: 100%;
+}
+
+button.equal.scientific {
+  grid-column: span 6;
+}
+
+/* Specific styles for the clear button */
+button.clear {
+  background: var(--color-red); /* Red */
+}
+
+/* Specific styles for scientific functions */
+button.function {
+  background: var(--color-lighter-purple); /* Light purple for scientific functions */
+}
+
+/* Styles for the calculator display */
+.display {
+  width: 100%;
+  background: var(--color-medium-purple); /* Medium purple */
+  color: #fff;
+  font-size: 2em;
+  text-align: right;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}

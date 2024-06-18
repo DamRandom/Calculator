@@ -1,0 +1,118 @@
+/* App.css */
+:root {
+  --color-white: #f0e6fa;
+  --color-light-purple: #7e57c2;
+  --color-medium-purple: #9575cd;
+  --color-dark-purple: #7e57c2;
+  --color-lighter-purple: #b39ddb;
+  --color-red: #ef5350;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(20px, -20px);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.7;
+  }
+}
+
+@keyframes bubble2 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-20px, 20px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.6;
+  }
+}
+
+@keyframes bubble3 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(20px, 20px);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.8;
+  }
+}
+
+@keyframes bubble4 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-20px, -20px);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.5;
+  }
+}
+
+.App {
+  text-align: center;
+  background-color: var(--color-white);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.bubble {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: var(--color-light-purple);
+  border-radius: 50%;
+  animation: bubble 10s infinite;
+  filter: blur(8px);
+  box-shadow: 0 0 10px 5px var(--color-light-purple);
+}
+
+.bubble2 {
+  width: 60px;
+  height: 60px;
+  background: var(--color-medium-purple);
+  animation: bubble2 12s infinite;
+  filter: blur(6px);
+  box-shadow: 0 0 8px 4px var(--color-medium-purple);
+}
+
+.bubble3 {
+  width: 100px;
+  height: 100px;
+  background: var(--color-lighter-purple);
+  animation: bubble3 14s infinite;
+  filter: blur(10px);
+  box-shadow: 0 0 12px 6px var(--color-lighter-purple);
+}
+
+.bubble4 {
+  width: 50px;
+  height: 50px;
+  background: var(--color-medium-purple);
+  animation: bubble4 16s infinite;
+  filter: blur(5px);
+  box-shadow: 0 0 6px 3px var(--color-medium-purple);
+}

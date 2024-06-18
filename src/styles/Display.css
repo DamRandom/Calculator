@@ -1,0 +1,34 @@
+/* Display.css */
+
+.display {
+  width: 100%;
+  background-color: var(--color-strong-blue); /* Strong blue */
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  box-sizing: border-box; /* Ensure padding does not affect container size */
+}
+
+.operation {
+  width: 100%;
+  font-size: 1em;
+  color: var(--color-white); /* White text */
+  text-align: left;
+  padding: 5px;
+  margin-bottom: 10px; /* Space between operation and result */
+  min-height: 30px; /* Minimum height to prevent size change */
+  box-sizing: border-box; /* Ensure padding does not affect container size */
+}
+
+.result {
+  width: 100%;
+  font-size: 1.5em;
+  color: var(--color-white); /* White text */
+  text-align: right;
+  padding: 5px;
+  background-color: transparent;
+  box-sizing: border-box; /* Ensure padding does not affect container size */
+}

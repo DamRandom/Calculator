@@ -1,0 +1,41 @@
+/* CalculatorCarousel.css */
+
+.calculator-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--color-white); /* White background */
+}
+
+.calculator {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Adjust maximum width as needed */
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, filter 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.calculator.active {
+  z-index: 2; /* Active calculator in front */
+  width: 580px;
+  filter: none; /* Remove any applied filters */
+  transition: transform 0.5s ease-in-out; /* Adjust transition timing */
+}
+
+.calculator.inactive {
+  z-index: 1; /* Inactive calculator behind */
+  width: 50%; /* Reduced size */
+  transform: scale(0.8);
+  filter: blur(5px); /* Apply blur effect */
+  cursor: pointer; /* Change cursor on hover */
+  box-shadow: none;
+  position: absolute; /* Absolute position to overlay */
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease-in-out; /* Adjust transition timing */
+}
+
+.calculator.inactive:hover {
+  filter: blur(3px); /* Reduce blur on hover */
+}
